@@ -1,3 +1,6 @@
 [submodule "MarsBuddyBlank"]
 	path = MarsBuddyBlank
 	url = https://github.com/jamesleeht/MarsBuddyBlank
+[submodule "marsbot"]
+	path = marsbot
+	url = https://github.com/jamesleeht/marsbot
