@@ -8,8 +8,8 @@ This simple bot has already been built for you and you can find the project file
 There are 3 steps to this tutorial:
 
 1. Publishing the bot to Github
-2. Registering the bot on the Bot Framework portal
-3. Deploying to Azure using CI from Github
+2. Deploying to Azure using CI from Github
+3. Registering the bot on the Bot Framework portal 
 
 ## Prerequisites
 
@@ -106,10 +106,17 @@ After signing in, you will be greeted with a simple form that allows you to regi
 
 Most of the fields are self-explanatory. 
 - The "Messaging Endpoint" field should be filled with the domain given to you on your Azure Web App, but subdomain to /api/messages.
-- The "Create Microsoft App ID and Password" button will open a new page which you can come back from afterwards.
+- The "Create Microsoft App ID and Password" will give you a new ID and password. Save this as we need it later.
 - You can also input your Azure Application Insights key if you enabled it when creating the Web App on Azure, but it's optional.
 
 ![Registration](https://raw.githubusercontent.com/alyssaong1/HOL-NUSHackathon/master/Images/Portal/Registration.PNG)
+
+## Authorizing your bot
+Now that you have the bot deployed on Azure and registered on the Bot Framework, we need to add the App ID and Password on Azure.
+
+Go back to your deployment on Azure and click on App Settings, configuring the App ID and Password we got just now.
+
+![AppSettings](https://raw.githubusercontent.com/jamesleeht/MarsXamarin2/master/Images/marsbotsettings.PNG)
 
 ## Managing your new bot
 After registering, you'll be sent to the page where you can manage all your bots. Click on the bot you just created. The page should look like this:
@@ -120,12 +127,11 @@ The top portion has several useful functions.
 - A testing function which will send a simple HTTP request to your messaging endpoint and give you back an appropriate success or error message.
 - The Web Chat (iframe) channel that has been pre-embedded for you on the page, allowing you to talk to your bot from the portal
 
-## Testing the bot
 Try writing "Hi" to the bot in the web chat and see if it responds. If it does then we have successfully deployed the bot.
 
 ## Setting up Direct Line
 
-![DirectLine](https://raw.githubusercontent.com/jamesleeht/MarsXamarin2/master/Images/marsxbot.PNG)
+![DirectLine](https://raw.githubusercontent.com/jamesleeht/MarsXamarin2/master/Images/marsbotdl.PNG)
 
 Go down to the Direct Line row and click "Add" on the right. Click "Add new site" on the left and add a new site.
 You will be given 2 keys, copy the first key and save it somewhere, we will need this key later.

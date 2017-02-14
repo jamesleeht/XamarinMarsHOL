@@ -106,7 +106,7 @@ public async Task GetMessagesAsync(ObservableCollection<MessageListItem> collect
     //Loop retrieval
     while(true)
     {
-        Debug.WriteLine("Reading message every 1 second");
+        Debug.WriteLine("Reading message every 3 seconds");
         
         //Get activities (messages) after the watermark
         var activitySet = await Client.Conversations.GetActivitiesAsync(MainConversation.ConversationId, watermark);
@@ -123,8 +123,8 @@ public async Task GetMessagesAsync(ObservableCollection<MessageListItem> collect
             }             
         }
 
-        //Wait 1 second
-        await Task.Delay(1000);
+        //Wait 3 seconds
+        await Task.Delay(3000);
     }
 }
 ```
@@ -132,7 +132,7 @@ public async Task GetMessagesAsync(ObservableCollection<MessageListItem> collect
 This method takes in an `ObservableCollection` typed parameter. 
 This collection will later be binded to the UI in Xamarin, so we will need to push any new messages into this collection.
 
-In this method, it checks for new messages every second, establishing a watermark every iteration to ensure that we do not retrieve old messages.
+In this method, it checks for new messages every 3 seconds, establishing a watermark every iteration to ensure that we do not retrieve old messages.
 Whenever we retrieve a new message, we create a new `MessageListItem` from it and push it into the collection.
 
 In the next mission, we will look into utilizing the class we crafted here. 
