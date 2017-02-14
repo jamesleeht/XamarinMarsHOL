@@ -8,21 +8,21 @@ Your crew has just found an alien bot on Mars that understands English, but we n
 After establishing a connection, We also need to create a tool that can patch our camera feeds into the Computer Vision API, in order to identify unknown objects.
 
 ## Prerequisites
-Go through this [install document](https://github.com/jamesleeht/MarsXamarin/blob/master/INSTALL.md).
+Go through this [install document](https://github.com/jamesleeht/MarsXamarin2/blob/master/INSTALL.md).
 
 ## Introduction
 Xamarin allows you to write your code base once in C#/.NET and have it deployed across the 3 popular mobile platforms, iOS, Android and Windows Phone.
 
 In this Mars Mission guide, we will learn to build a Xamarin Forms app:
 
-1. [Publishing a bot and getting direct line](https://github.com/jamesleeht/MarsXamarin/blob/master/MISSION1.md)
-2. [Connecting to a bot](https://github.com/jamesleeht/MarsXamarin/blob/master/MISSION2.md)
-3. [Making an interface to interact with the bot](https://github.com/jamesleeht/MarsXamarin/blob/master/MISSION3.md)
+1. [Publishing a bot and getting direct line](https://github.com/jamesleeht/MarsXamarin2/blob/master/MISSION1.md)
+2. [Connecting to a bot](https://github.com/jamesleeht/MarsXamarin2/blob/master/MISSION2.md)
+3. [Making an interface to interact with the bot](https://github.com/jamesleeht/MarsXamarin2/blob/master/MISSION3.md)
 
 If you've finished the missions, there are some challenges for you to complete to and win some prizes.
 
-1. [Challenge 1: Quality Control](https://github.com/jamesleeht/MarsXamarin/blob/master/CHALLENGE1.md)
-2. [Challenge 2: Identifying Objects](https://github.com/jamesleeht/MarsXamarin/blob/master/CHALLENGE2.md)
+1. [Challenge 1: Quality Control](https://github.com/jamesleeht/MarsXamarin2/blob/master/CHALLENGE1.md)
+2. [Challenge 2: Identifying Objects](https://github.com/jamesleeht/MarsXamarin2/blob/master/CHALLENGE2.md)
 
 ## Starting Point
 In this repository there is a blank Xamarin.Forms shared project that has been pre-configured with the right nugets for you.
