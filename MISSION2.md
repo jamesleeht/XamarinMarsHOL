@@ -2,8 +2,8 @@
 We just deployed the alien bot we found on Mars. There's a problem though. The bot has it's own special set of parameters and communication methods.
 As a result, we need to craft a class which will help us in connecting to the bot. We need to establish the right functions in our new class for use in our application later.
 
-## Technical Introduction
-In this mission, we will be connecting to the bot we just built in NodeJS and the Microsoft Bot Framework. Bots built using the Microsoft Bot Framework have a Direct Line channel.
+## Introduction
+In this mission, we will be connecting to the bot. Bots built using the Microsoft Bot Framework have a Direct Line channel.
 This channel is essentially a REST API that allows us to interact with the bot using HTTP requests and responses.
 
 Although it is possible to setup your own classes and models for accessing the REST API, it can be troublesome. Luckily, there is a Nuget package published by Microsoft
@@ -28,15 +28,13 @@ Let's define a few new variables in our new blank class.
 ```cs
 class BotConnection
 {
-    public DirectLineClient Client = new DirectLineClient("Z1manpIsazM.cwA.6e4.w3TbL5dPeJKMTivS4iEl_ByEwr760KESaTQ7ftSX2T8");
+    public DirectLineClient Client = new DirectLineClient("Place key here");
     public Conversation MainConversation;
     public ChannelAccount Account;
 }
 ```
 
-First, we create a new `DirectLineClient` object using a DirectLine key (taken from the bot's portal).
-
-For the purposes of this tutorial, we will use this key to connect to the Mars Bot: `Z1manpIsazM.cwA.6e4.w3TbL5dPeJKMTivS4iEl_ByEwr760KESaTQ7ftSX2T8`
+First, we create a new `DirectLineClient` object using a DirectLine key (taken from the bot's portal in Mission 1).
 
 Then, there are another 2 variables for storing the current conversation as well as the user's account, which we will define later.
 
@@ -137,4 +135,4 @@ This collection will later be binded to the UI in Xamarin, so we will need to pu
 In this method, it checks for new messages every second, establishing a watermark every iteration to ensure that we do not retrieve old messages.
 Whenever we retrieve a new message, we create a new `MessageListItem` from it and push it into the collection.
 
-In the next mission, we will look into utilizing the class we crafted here in Mission 1.
+In the next mission, we will look into utilizing the class we crafted here. 

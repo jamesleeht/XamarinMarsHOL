@@ -10,9 +10,8 @@ simply call methods within our application. This means that we won't need to man
 
 There are 2 steps to this mission:
 
-1. Implement a camera function
+1. Implement a camera function (guided)
 2. Send the captured image to the Computer Vision API and get a result
-
 
 ## Setup
 
@@ -26,7 +25,7 @@ There are 2 Nugets which we want to install in our project:
 
 ### Installation steps
 
-![step1](https://raw.githubusercontent.com/jamesleeht/MarsXamarin/master/Images/solutionnugets.png)
+![step1](https://raw.githubusercontent.com/jamesleeht/MarsXamarin2/master/Images/solutionnugets.png)
 
 1. Right-click on the solution and click "Manage NuGet packages for solution".
 2. Click on the "Browse" tab
@@ -134,16 +133,16 @@ and specifying the format which we want to save the picture, we can get the pict
 ## Implementing Computer Vision
 Now that we have the camera setup and can get the captured picture from it, we need to pass it into the Computer Vision API.
 
-Since we installed a Nuget that helps us interact with the API, let's make a simple method that uses the client library.
+Try figuring out how to pass the taken picture into the Computer Vision API and display the result as an alert.
 
-First, we need to initialize the client library with our CV API key. (I've provided an API key here for convenience)
+You can find a tutorial for Computer Vision here:
 
-```cs
-using Microsoft.ProjectOxford.Vision;
-using Microsoft.ProjectOxford.Vision.Contract;
+https://www.microsoft.com/cognitive-services/en-us/Computer-Vision-API/documentation/vision-api-how-to-topics/HowToCallVisionAPI
 
-//Computer Vision client
-VisionServiceClient visionClient = new VisionServiceClient("775c63123c104445bbc227eb90496098");
-```
+After getting the result, you need to display it to the user:
 
-Next, you have to figure out how to
+https://developer.xamarin.com/guides/xamarin-forms/user-interface/navigation/pop-ups/
+
+## Finishing Requirements
+You should be able to open the camera from the UWP app and take a picture and the application will send the picture to the Computer Vision API,
+displaying the result on an alert.
