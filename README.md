@@ -23,7 +23,7 @@ If you've finished the missions, there are some challenges for you to complete t
 2. [Challenge 2: Identifying Objects](https://github.com/jamesleeht/MarsXamarin2/blob/master/CHALLENGE2.md)
 
 ## Starting Point
-In this repository there is a blank Xamarin.Forms shared project that has been pre-configured with the right nugets for you.
+In this repository there is a [blank Xamarin.Forms shared project](https://github.com/jamesleeht/MarsBuddyBlank) that has been pre-configured with the right nugets for you.
 
 The main nugets installed in this project are:
 - [Bot Connector DirectLine](https://www.nuget.org/packages/Microsoft.Bot.Connector.DirectLine/3.0.0)
