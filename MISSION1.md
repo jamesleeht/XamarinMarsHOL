@@ -46,11 +46,7 @@ We now need to link our local Git folder to the remote Github repository. Type i
 git remote add origin https://github.com/yourusername/yourrepositoryname.git
 ```
 
-Make sure you use the url you copied earlier in the above command. Your local Git repository is now remotely tracking your Github repository online. Type `git remote -v` to check that it points to the correct url. Let's pull our remote Github repo, using this command:
-
-```shell
-git pull origin master
-```
+Make sure you use the url you copied earlier in the above command. Your local Git repository is now remotely tracking your Github repository online. Type `git remote -v` to check that it points to the correct url.
 
 Once that's done, let's commit and push our code to the Github repo. Run the following commands (separately):
 
