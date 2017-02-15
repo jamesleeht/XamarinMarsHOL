@@ -3,9 +3,7 @@
 ## Mission Brief
 Your crew on Mars has lost contact with Earth and as a result is lacking some essential functions for the mission. Your team has some satellite phones running Android, but the communcation tablets are running Windows.
 
-Your crew has just found an alien bot on Mars that understands English, but we need an interface to interact with the bot. As we need a tool that works across all the team's devices, we will be building an application in Xamarin.
-
-After establishing a connection, We also need to create a tool that can patch our camera feeds into the Computer Vision API, in order to identify unknown objects.
+Your crew has just found an alien bot on Mars that understands English, but we need to deploy it in order for us to connect. We also need to use an interface to interact with the bot. As we need a tool that works across all the team's devices, we will be deploying a bot and building an application in Xamarin.
 
 ## Prerequisites
 Go through this [install document](https://github.com/jamesleeht/MarsXamarin2/blob/master/INSTALL.md).
