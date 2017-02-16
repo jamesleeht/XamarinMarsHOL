@@ -1,4 +1,4 @@
-# Mars Mission: Xamarin
+# Mars Mission: Xamarin with bots
 
 ## Mission Brief
 Your crew on Mars has lost contact with Earth and as a result is lacking some essential functions for the mission. Your team has some satellite phones running Android, but the communcation tablets are running Windows.
@@ -11,7 +11,7 @@ Go through this [install document](https://github.com/jamesleeht/MarsXamarin2/bl
 ## Introduction
 Xamarin allows you to write your code base once in C#/.NET and have it deployed across the 3 popular mobile platforms, iOS, Android and Windows Phone.
 
-In this Mars Mission guide, we will learn to build a Xamarin Forms app:
+This HOL will bring you through deploying a simple bot using the Microsoft Bot Framework, setting up a DirectLine (REST API) connection and building a Xamarin app to work with it:
 
 1. [Publishing a bot and getting direct line](https://github.com/jamesleeht/MarsXamarin2/blob/master/MISSION1.md)
 2. [Connecting to a bot](https://github.com/jamesleeht/MarsXamarin2/blob/master/MISSION2.md)
