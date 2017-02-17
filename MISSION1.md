@@ -1,5 +1,8 @@
 # Mission 1: Publishing a NodeJS bot to Azure
 
+## Briefing
+
+
 ## Introuction
 
 In this mission, we will deploy a bot that uses NodeJS and the Microsoft Bot Framework to Azure. 
@@ -112,12 +115,12 @@ Now that you have the bot deployed on Azure and registered on the Bot Framework,
 
 Go back to your deployment on Azure and click on App Settings, configuring the App ID and Password we got just now.
 
-![AppSettings](https://raw.githubusercontent.com/jamesleeht/MarsXamarin2/master/Images/marsbotsettings.PNG)
+![AppSettings](https://raw.githubusercontent.com/jamesleeht/XamarinMarsHOL/master/Images/marsbotsettings.PNG)
 
 ## Managing your new bot
 After registering, you'll be sent to the page where you can manage all your bots. Click on the bot you just created. The page should look like this:
 
-![Management](https://raw.githubusercontent.com/jamesleeht/MarsXamarin2/master/Images/marsbotportal.PNG)
+![Management](https://raw.githubusercontent.com/jamesleeht/XamarinMarsHOL/master/Images/marsbotportal.PNG)
 
 The top portion has several useful functions.
 - A testing function which will send a simple HTTP request to your messaging endpoint and give you back an appropriate success or error message.
@@ -127,7 +130,7 @@ Try writing "Hi" to the bot in the web chat and see if it responds. If it does t
 
 ## Setting up Direct Line
 
-![DirectLine](https://raw.githubusercontent.com/jamesleeht/MarsXamarin2/master/Images/marsbotdl.PNG)
+![DirectLine](https://raw.githubusercontent.com/jamesleeht/XamarinMarsHOL/master/Images/marsbotdl.PNG)
 
 Go down to the Direct Line row and click "Add" on the right. Click "Add new site" on the left and add a new site.
 You will be given 2 keys, copy the first key and save it somewhere, we will need this key later.
