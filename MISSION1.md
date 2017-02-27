@@ -1,8 +1,5 @@
 # Mission 1: Publishing a NodeJS bot to Azure
 
-## Briefing
-
-
 ## Introuction
 
 In this mission, we will deploy a bot that uses NodeJS and the Microsoft Bot Framework to Azure. 
