@@ -34,6 +34,8 @@ class BotConnection
 }
 ```
 
+#### Use this key if you skip Mission 1: "Z1manpIsazM.cwA.6e4.w3TbL5dPeJKMTivS4iEl_ByEwr760KESaTQ7ftSX2T8"
+
 First, we create a new `DirectLineClient` object using a DirectLine key (taken from the bot's portal in Mission 1).
 
 Then, there are another 2 variables for storing the current conversation as well as the user's account, which we will define later.
