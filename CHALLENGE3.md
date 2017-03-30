@@ -46,4 +46,116 @@ Let's add some sample rows of data to the database. Put the team members' names 
 
 Done! Now we have a fully working database and API powered by Azure Mobile Apps.
 
-## Connecting to Azure from Xamarin
+## Xamarin Setup
+
+Right-click the solution and install the Nuget package `Microsoft.Azure.Mobile.Client`. If you've forogtten how to install a Nuget, you can refer back to Challenge 2.
+
+## Xamarin UI
+
+Next, let's make a new page to display the information in Xamarin, as well as a new button to lead to the new page.
+
+Right click on the MarsBuddy project and click Add > New Item. Go down to "Cross-Platform" at the side and create a new "Forms Xaml Page". Name it "MembersPage.xaml".
+
+If you've finished Mission 3, constructing this UI should feel familiar to you.
+
+Just like in Mission 3 where we constructed a `MainPage.xaml` with a `ListView`, we'll do something similar over here. 
+
+Let's insert some elements into the xaml to help us construct our UI:
+
+`MembersPage.xaml`:
+
+```xml
+<StackLayout Spacing="10" Padding="10" HorizontalOptions="Fill" VerticalOptions="Fill" Orientation="Vertical">
+    <Label Text="Member List" VerticalOptions="StartAndExpand" HorizontalOptions="Center" />
+    <ListView x:Name="MemberListView"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="Fill"
+                >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding Name}"/>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+```
+
+Next, we need a method to retrieve the data from Azure and display it in a `ListView`.
+
+`MembersPage.xaml.cs`:
+
+```cs
+//Import Azure Mobile Apps SDK
+using Microsoft.WindowsAzure.MobileServices;
+
+namespace MarsBuddy
+{
+	public partial class MembersPage : ContentPage
+	{
+        public MembersPage ()
+        {
+            InitializeComponent ();
+
+            //Call data retrieval method
+            GetDataAsync();
+        }
+
+        public async void GetDataAsync()
+        {
+            //Initialize SDK to connect to Azure
+            var client = new MobileServiceClient("https://marsxam.azurewebsites.net");
+
+            //Retrieve data from Azure
+            IMobileServiceTable<Member> memberTable = client.GetTable<Member>();
+            List<Member> memberList = await memberTable.ToListAsync();
+
+            //Set the list data
+            MemberListView.ItemsSource = memberList;
+        }
+    }
+}
+```
+
+## Linking it up
+Next, we need to be able to go to the Members page from the Main page.
+
+Let's first add a navigation component to the application.
+
+Go to `App.xaml.cs` and change this code in the constructor:
+
+```cs
+public App()
+{
+    InitializeComponent();
+
+    MainPage = new NavigationPage(new MarsBuddy.MainPage());
+}
+```
+
+This allows our application to handle navigation between pages.
+
+Now, let's add a button into the Main Page which opens our Members Page.
+
+Go to `MainPage.xaml` and add a new button:
+
+```xml
+<Button
+    Text="Member List"
+    VerticalOptions="End"
+    HorizontalOptions="Fill"
+    Clicked="OpenMembers"
+    />
+```
+Then in `MainPage.xaml.cs`, trigger a method to open the new page and add it to the navigation stack.
+
+```cs
+public async void OpenMembers(object sender, EventArgs args)
+{
+    await Navigation.PushAsync(new MembersPage());
+}   
+```
+
+## Conclusion
+Done! Now our application has a new page which can retrieve data from Azure Mobile Apps.
+
+As a challenge, create a text box on the Members Page which will allow us to add a new member to the database.
