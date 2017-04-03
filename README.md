@@ -28,6 +28,7 @@ This HOL will bring you through deploying a simple bot using the Microsoft Bot F
 1. [Publishing a bot and getting DirectLine](https://github.com/jamesleeht/XamarinMarsHOL/blob/master/MISSION1.md)
 2. [Connecting to a bot](https://github.com/jamesleeht/XamarinMarsHOL/blob/master/MISSION2.md)
 3. [Making an interface to interact with the bot](https://github.com/jamesleeht/XamarinMarsHOL/blob/master/MISSION3.md)
+4. [Retrieving from a database with Azure Mobile Apps](https://github.com/jamesleeht/XamarinMarsHOL/blob/master/MISSION4.md)
 
 If you've finished the missions, there are some challenges for you to complete to and win some prizes.
 
